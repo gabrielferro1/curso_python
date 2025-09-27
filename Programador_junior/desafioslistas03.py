@@ -6,3 +6,18 @@
 # (use .count() para contar).
 # Caso contrário, mostre:
 "Esse nome não está na lista."
+
+names = ['ana', 'gabriel', 'maria', 'joyce', 'gabriel']
+
+print("Name's list")
+for name in names:
+    print(name)
+
+entered_name = input("Type a name:").lower()
+names = [name.lower() for name in names] 
+
+if entered_name in names:
+    quantity = names.count(entered_name)
+    print(f"The name appears {quantity} times on the list!")
+else:
+    print("This name is not in the list!")
